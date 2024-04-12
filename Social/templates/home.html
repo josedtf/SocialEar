@@ -1,0 +1,36 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<title>SocialEar</title>
+<div class="container">
+    <form action="">
+        <div class="mb-3">
+            <div id="contenido">
+                <h1>Bienvenidos a SocialEar</h1>
+                <form>
+                    <label for="campoTexto">Ingresa el nombre de la compañia a buscar:</label><br>
+                    <input type="text" id="campoTexto" name="campoTexto"><br>
+                    <input type="button" value="Imprimir" onclick="imprimirTexto()">
+                  </form>
+                  
+                  <p id="textoIngresado"></p>
+                  
+                  <script>
+                    function imprimirTexto() {
+                      // Obtener el valor del campo de texto
+                      var texto = document.getElementById("campoTexto").value;
+                      
+                      // Imprimir el texto en el documento
+                      document.getElementById("textoIngresado").textContent = "Resultados para: " + texto;
+                    }
+                  </script>
+            </div>
+        </div>
+    </div>    
+    </div>
+    <br/>
+    <br /> 
+    <br /> 
+</div>
+
+{% endblock content %}
